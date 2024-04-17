@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* Variables */
+:root {
+    --backgroundPrincipal: #15151a;
+    --backgroundSecundario: #202020;
+    --grisInput: #353535;
+    --azul: #1747f2;
+    --verde: #00ff29;
+    --rojo: #ff0000;
+}
+
+body {
+    background-color: var(--backgroundPrincipal);
+}
+
+.formulario-iniciosesion, .formulario-crearcuenta {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+h1 {
+    color: #fff;
+    font-size: 30px;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+form {
+    background-color: var(--backgroundSecundario);
+    display: grid;
+    width: 90%;
+    height: auto;
+    padding: 30px;
+    padding-bottom: 10%;
+    padding-top: 10%;
+    border-radius: 40px;
+    gap: 1rem;
+}
+
+form input {
+    background-color: var(--grisInput);
+    border: 0;
+    border-radius: 30px;
+    padding: 15px 10px;
+    color: #fff;
+}
+
+form input:focus{
+    outline: none;
+}
+
+form input[type="submit"]{
+    background-color: var(--azul);
+    color: #fff;
+    font-size: 20px;
+}
+
+.formulario-iniciosesion form label, a,
+.formulario-crearcuenta form label{
+    color: var(--azul);
+    font-weight: 666;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a{
+    text-align: center;
+}

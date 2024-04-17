@@ -1,0 +1,435 @@
+/* MARK: Reset
+
+/* Normalize */
+* {
+  box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Variables */
+:root {
+  --backgroundPrincipal: #15151a;
+  --backgroundSecundario: #202020;
+  --grisInput: #353535;
+  --azul: #1747f2;
+  --verde: #00ff29;
+  --rojo: #ff0000;
+}
+
+/* MARK: Body
+/* Body */
+body {
+  background-color: var(--backgroundPrincipal);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100vw;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* MARK: Formulario
+/* Formulario */
+.form {
+  background-color: var(--backgroundSecundario);
+  width: 90%;
+  height: auto;
+  display: grid;
+  place-items: center;
+  border-radius: 40px;
+  transition: all 0.2s ease;
+  margin-top: 10%;
+}
+.form form .menu-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+.form form .menu-form img {
+  width: 17%;
+  object-fit: contain;
+  display: none;
+}
+.form form .menu-form h2 {
+  color: white;
+  width: 70%;
+  font-size: 1.5rem;
+}
+.form form .contenido-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  display: none;
+}
+.form form .contenido-form .dato {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 25%;
+  width: 80%;
+}
+.form form .contenido-form .dato label {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.form form .contenido-form .dato input {
+  height: 55%;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  background-color: var(--grisInput);
+  color: white;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+}
+.form form .contenido-form .dispositivos-button {
+  height: 20%;
+  width: 60%;
+  border-radius: 20px;
+  background-color: var(--grisInput);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.form form .contenido-form .modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000bd;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+}
+.form form .contenido-form .modal--show {
+  opacity: 1;
+  pointer-events: unset;
+}
+.form form .contenido-form .modal .dispositivos {
+  margin: auto;
+  width: 90%;
+  height: 55%;
+  background-color: var(--backgroundSecundario);
+  border-radius: 10px;
+  display: grid;
+  gap: 1em;
+  padding: 20px;
+  border-radius: 40px;
+  place-items: center;
+  transition: all 0.2s ease;
+}
+.form form .contenido-form .modal .dispositivos .content {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.form form .contenido-form .modal .dispositivos .content .arriba {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  height: 5%;
+}
+.form form .contenido-form .modal .dispositivos .content .arriba h3 {
+  color: white;
+  font-size: 1.7rem;
+}
+.form form .contenido-form .modal .dispositivos .content .inputs {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 75%;
+}
+.form form .contenido-form .modal .dispositivos .content .inputs .dato {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 30%;
+}
+.form form .contenido-form .modal .dispositivos .content .inputs .dato p {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.form form .contenido-form .modal .dispositivos .content .inputs .dato .button {
+  width: 40%;
+  height: 60%;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 20pc;
+  background-color: var(--grisInput);
+  display: grid;
+  place-items: center;
+  color: white;
+}
+.form
+  form
+  .contenido-form
+  .modal
+  .dispositivos
+  .content
+  .inputs
+  .dato
+  .button
+  span {
+  transition: all 0.4s ease;
+}
+.form form .contenido-form .modal .dispositivos .content .inputs .notebooks {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.form
+  form
+  .contenido-form
+  .modal
+  .dispositivos
+  .content
+  .inputs
+  .notebooks
+  .content {
+  width: auto;
+  height: 100%;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(6, 40px);
+  grid-template-rows: repeat(5, 1fr);
+}
+.form
+  form
+  .contenido-form
+  .modal
+  .dispositivos
+  .content
+  .inputs
+  .notebooks
+  .content
+  label {
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+.form
+  form
+  .contenido-form
+  .modal
+  .dispositivos
+  .content
+  .inputs
+  .notebooks
+  .content
+  label
+  input {
+  display: none;
+}
+
+.form
+  form
+  .contenido-form
+  .modal
+  .dispositivos
+  .content
+  .inputs
+  .notebooks
+  .content
+  label
+  span {
+  display: inline-block;
+  position: relative;
+  background: var(--backgroundPrincipal);
+  transition: all 0.7s;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 2em;
+}
+.form
+  form
+  .contenido-form
+  .modal
+  .dispositivos
+  .content
+  .inputs
+  .notebooks
+  .content
+  label
+  input:checked
+  ~ span {
+  background-color: #1747f2;
+}
+
+.form form .contenido-form .modal .dispositivos .content .inputs .dato input {
+  width: 40%;
+  height: 60%;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.form form .contenido-form .modal .dispositivos .content .inputs .dato label {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.form form .contenido-form .modal .dispositivos .content button {
+  height: 11%;
+  width: 100%;
+  border-radius: 20px;
+  background-color: var(--azul);
+  outline: none;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+/* MARK: Prestamos */
+
+.prestamos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+.prestamos .cartas-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10%;
+  align-items: center;
+  width: 90%;
+}
+.prestamos .cartas-container .carta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  border-radius: 40px;
+  background-color: var(--backgroundSecundario);
+  color: white;
+  transition: all 0.3s ease;
+}
+.prestamos .cartas-container .carta .arriba {
+  width: 85%;
+  height: 27%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.prestamos .cartas-container .carta .arriba .curso-profesor {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--azul);
+}
+.prestamos .cartas-container .carta .arriba .botones {
+  display: flex;
+  width: 40%;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+.prestamos .cartas-container .carta .arriba .botones .boton {
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+}
+.prestamos .cartas-container .carta .arriba .botones .verde {
+  background-color: var(--verde);
+}
+.prestamos .cartas-container .carta .arriba .botones .azul {
+  background-color: var(--azul);
+}
+.prestamos .cartas-container .carta .contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+}
+.prestamos .cartas-container .carta .contenido ul {
+  width: 55%;
+  list-style: none;
+  font-size: 1rem;
+  justify-content: space-between;
+}
+.prestamos .cartas-container .carta .contenido .boton {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  width: 45%;
+}
+.prestamos .cartas-container .carta .contenido .boton button {
+  width: 90%;
+  height: 30%;
+  background-color: var(--azul);
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+.prestamos .cartas-container .carta .detalles {
+  flex-direction: column;
+  height: 80%;
+  display: none;
+}
+.prestamos .cartas-container .carta .detalles ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.prestamos .cartas-container .carta .detalles ul li {
+  background-color: var(--grisInput);
+  border-radius: 20px;
+  padding: 10px;
+}
+.prestamos .cartas-container .carta .detalles ul li span {
+  color: var(--azul);
+}
+.prestamos .cartas-container .carta .detalles .boton {
+  height: 20%;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+}
+.prestamos .cartas-container .carta .detalles .boton button {
+  height: 55%;
+  width: 60%;
+  margin: 5% 0;
+  letter-spacing: 1px;
+}
